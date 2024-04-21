@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Question 1"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is the largest mammal in the world??"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/questionTextView"/>
+
+    <RadioGroup
+        android:id="@+id/optionsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/question1">
+        <RadioButton
+            android:id="@+id/option1"
+            android:text=" African Elephant"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option2"
+            android:text="Giraffe"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option3"
+            android:text="Blue Whale"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option4"
+            android:text="Hippopotamus"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <!-- Add more RadioButton here for other options -->
+    </RadioGroup>
+</RelativeLayout>

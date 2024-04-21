@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Question 5"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Who wrote the play 'Romeo and Juliet?"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/questionTextView"/>
+    <RadioGroup
+        android:id="@+id/optionsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/question5">
+        <RadioButton
+            android:id="@+id/option1"
+            android:text="Geoffrey Chaucer"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option2"
+            android:text="William Shakespeare"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option3"
+            android:text="Charles Dickens"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/option4"
+            android:text="Jane Austen"
+            android:layout_width="288dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/rounded_button_default"
+            android:gravity="center"/>
+        <!-- Add more RadioButton here for other options -->
+    </RadioGroup>
+</RelativeLayout>

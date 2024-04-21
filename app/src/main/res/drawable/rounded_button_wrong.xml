@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="8dp" /> <!-- 设置与你的原矩形框相同的圆角 -->
+    <solid android:color="#FFF44336" /> <!-- 正确选项的颜色 -->
+</shape>
