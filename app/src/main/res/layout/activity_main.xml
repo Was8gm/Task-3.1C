@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:hint="Enter your name"
         android:layout_margin="16dp"
+
         android:inputType="textPersonName" />
 
     <Button

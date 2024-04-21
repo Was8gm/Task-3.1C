@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
         progressBar = findViewById(R.id.progressBar);
         editTextUserName = findViewById(R.id.editTextUserName);
         TextView userNameTextView = findViewById(R.id.userNameTextView);
-        // 默认情况下隐藏问卷和进度条
+
         viewPager.setVisibility(View.GONE);
         progressBar.setVisibility(View.GONE);
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
                     nextButton.setVisibility(View.VISIBLE);
 
                     userNameTextView.setText("Login User:"+userName);
-                    // 确保这里传递的参数与 QuestionPagerAdapter 的构造函数匹配
+
                     viewPager.setAdapter(new QuestionPagerAdapter(MainActivity.this));
                 } else {
                     editTextUserName.setError("Please enter your name");
@@ -62,15 +62,15 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
             @Override
             public void onClick(View v) {
                 int currentItem = viewPager.getCurrentItem();
-                // 检查是否是第一页
+
                 if (currentItem > 0) {
-                    // 不是第一页，移动到前一页
+
                     viewPager.setCurrentItem(currentItem - 1, true);
-                    currentProgress -= 20; // 递减进度
-                    progressBar.setProgress(currentProgress); // 更新进度条
+                    currentProgress -= 20;
+                    progressBar.setProgress(currentProgress);
 
                 } else {
-                    // 是第一页，不能再返回，可以考虑禁用按钮或者执行其他逻辑
+
                 }
             }
         });
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
                 int itemCount = viewPager.getAdapter().getItemCount();
                 if (currentItem < itemCount - 1) {
                     viewPager.setCurrentItem(currentItem + 1, true);
-                    currentProgress += 20; // 更新进度条进度
+                    currentProgress += 20;
                     progressBar.setProgress(currentProgress);
                     if (currentItem + 1 == itemCount - 1) {
                         // 当跳转到结果页面前的最后一个问题

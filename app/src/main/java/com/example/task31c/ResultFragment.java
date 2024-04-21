@@ -53,7 +53,7 @@ public class ResultFragment extends Fragment {
         TextView resultTextView = view.findViewById(R.id.resultTextView);
         int correctAnswers = getArguments().getInt("correctAnswers", 0);
         String userName = getArguments().getString("userName", "");
-        resultTextView.setText("恭喜 " + userName + "，您答对了 " + correctAnswers + "/5！");
+        resultTextView.setText("Congratulations " + userName + "，Your scroe " + correctAnswers + "/5！");
         return view;
     }
 }

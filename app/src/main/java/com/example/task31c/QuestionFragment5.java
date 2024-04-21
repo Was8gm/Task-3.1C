@@ -57,7 +57,7 @@ public class QuestionFragment5 extends Fragment {
                     correctRadioButton.setBackgroundResource(R.drawable.rounded_button_right);
 
                 }
-                boolean isCorrect = checkedId == R.id.option2; // 假设R.id.option3是正确答案
+                boolean isCorrect = checkedId == R.id.option2;
                 listener.onQuestionAnswered(isCorrect);
             }
         });

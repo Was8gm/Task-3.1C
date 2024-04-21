@@ -34,7 +34,7 @@ public class QuestionPagerAdapter extends FragmentStateAdapter {
                     return new QuestionFragment5();
 
                 default:
-                    return new QuestionFragment1(); // 默认返回第一个Fragment
+                    return new QuestionFragment1();
             }
         }
     }
@@ -42,6 +42,6 @@ public class QuestionPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 6; // 总共有3个页面
+        return 6;
     }
 }
