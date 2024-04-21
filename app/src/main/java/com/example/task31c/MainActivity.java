@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
                     currentProgress += 20;
                     progressBar.setProgress(currentProgress);
                     if (currentItem + 1 == itemCount - 1) {
-                        // 当跳转到结果页面前的最后一个问题
                         prevButton.setVisibility(View.GONE);
                         nextButton.setVisibility(View.GONE);
                     }
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
     }
     public void onQuestionAnswered(boolean isCorrect) {
         if (isCorrect) {
-            correctAnswers++;
+            ++correctAnswers;
         }
     }
 
@@ -107,32 +106,32 @@ public class MainActivity extends AppCompatActivity implements QuestionAnsweredL
         return userName;
     }
     public void resetQuiz() {
-        // 重置计分和进度
+
         correctAnswers = 0;
         currentProgress = 20; // 如果需要，将进度重置到初始值
 
-        // 重置用户名输入
+
         editTextUserName.setText("");
         editTextUserName.setVisibility(View.VISIBLE);
 
-        // 重置进度条
+
         progressBar.setProgress(0);
         progressBar.setVisibility(View.GONE); // 如果需要再次显示，这里应设为View.VISIBLE
 
-        // 重置按钮和文本
+
         Button buttonStart = findViewById(R.id.buttonStart);
         buttonStart.setVisibility(View.VISIBLE);
         TextView userNameTextView = findViewById(R.id.userNameTextView);
         userNameTextView.setText("");
 
-        // 重置 ViewPager 到第一页
+
         if (viewPager.getAdapter() != null) {
             viewPager.setAdapter(new QuestionPagerAdapter(this));
         }
         viewPager.setCurrentItem(0);
         viewPager.setVisibility(View.GONE);
 
-        // 显示开始界面的元素
+
         Button prevButton = findViewById(R.id.prevButton);
         Button nextButton = findViewById(R.id.nextButton);
         prevButton.setVisibility(View.GONE);

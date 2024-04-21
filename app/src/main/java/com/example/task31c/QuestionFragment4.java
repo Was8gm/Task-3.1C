@@ -32,7 +32,7 @@ public class QuestionFragment4 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question4, container, false);
         optionsGroup = view.findViewById(R.id.optionsGroup);
-        correctAnswerId = R.id.option4;
+        correctAnswerId = R.id.option4_4;
 
         optionsGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -57,7 +57,7 @@ public class QuestionFragment4 extends Fragment {
                     correctRadioButton.setBackgroundResource(R.drawable.rounded_button_right);
 
                 }
-                boolean isCorrect = checkedId == R.id.option4;
+                boolean isCorrect = checkedId == R.id.option4_4;
                 listener.onQuestionAnswered(isCorrect);
             }
         });

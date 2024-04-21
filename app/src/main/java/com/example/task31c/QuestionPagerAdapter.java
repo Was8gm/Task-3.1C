@@ -17,10 +17,7 @@ public class QuestionPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        if (position == getItemCount() - 1) {
-            MainActivity activity = (MainActivity) fragmentActivity;
-            return ResultFragment.newInstance(activity.getCorrectAnswers(), activity.getUserName());
-        } else {
+
             switch (position) {
                 case 0:
                     return new QuestionFragment1();
@@ -32,12 +29,15 @@ public class QuestionPagerAdapter extends FragmentStateAdapter {
                     return new QuestionFragment4();
                 case 4:
                     return new QuestionFragment5();
-
+                case 5:
+                {
+                    MainActivity activity = (MainActivity) fragmentActivity;
+                    return ResultFragment.newInstance(activity.getCorrectAnswers(), activity.getUserName());}
                 default:
                     return new QuestionFragment1();
             }
         }
-    }
+
 
 
     @Override

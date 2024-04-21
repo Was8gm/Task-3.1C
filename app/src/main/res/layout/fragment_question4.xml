@@ -57,7 +57,7 @@
             android:background="@drawable/rounded_button_default"
             android:gravity="center"/>
         <RadioButton
-            android:id="@+id/option4"
+            android:id="@+id/option4_4"
             android:text="Paris"
             android:layout_width="288dp"
             android:layout_height="52dp"
